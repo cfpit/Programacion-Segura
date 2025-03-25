@@ -1,0 +1,1 @@
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.4.4&packaging=jar&jvmVersion=17&groupId=ar.edu.centro8.ps&artifactId=ejemplobase&name=ejemplobase&description=Demo%20project%20for%20Spring%20Boot&packageName=ar.edu.centro8.ps.ejemplobase&dependencies=web,devtools,lombok,data-jpa,security
