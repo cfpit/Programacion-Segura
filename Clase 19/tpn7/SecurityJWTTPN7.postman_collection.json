@@ -1,0 +1,432 @@
+{
+	"info": {
+		"_postman_id": "939bb319-196a-46d5-9687-546fcebd0b4f",
+		"name": "SecurityJWTTPN7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39037753"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "centro8",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"centro8\",\r\n    \"password\":\"1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearPermisoRead",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZW50cm84IiwibmJmIjoxNzQ4NTU5OTY1LCJpc3MiOiJDRU5UUk84LVNFQyIsImV4cCI6MTc0ODU2MTc2NSwiaWF0IjoxNzQ4NTU5OTY1LCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJqdGkiOiIyOWNiZjVjYy1iNGIzLTQ3ZjMtOTU4Ny0wNGQyZGRkOGM1M2IifQ.lIhxoHruYRN4pX7lZqiSDTocFVGL2x_eieUcQhFYuB0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"permissionName\": \"READ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/permissions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearPermisoCreate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZW50cm84IiwibmJmIjoxNzQ4NTU5OTY1LCJpc3MiOiJDRU5UUk84LVNFQyIsImV4cCI6MTc0ODU2MTc2NSwiaWF0IjoxNzQ4NTU5OTY1LCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJqdGkiOiIyOWNiZjVjYy1iNGIzLTQ3ZjMtOTU4Ny0wNGQyZGRkOGM1M2IifQ.lIhxoHruYRN4pX7lZqiSDTocFVGL2x_eieUcQhFYuB0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"permissionName\": \"CREATE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/permissions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createRoleUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZW50cm84IiwibmJmIjoxNzQ4NjEzNDY2LCJpc3MiOiJDRU5UUk84LVNFQyIsImV4cCI6MTc0ODYzMTQ2NiwiaWF0IjoxNzQ4NjEzNDY2LCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJqdGkiOiJjZmVhM2ZkMC02M2Y0LTRlYWUtYjBkMS03ODVhOTlmZGZlYzEifQ.zrAoswMJLw90-YeQO8pXOfSfAXTufZsm9jO6kMB12qQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role\": \"USER\",\r\n    \"permissionsList\": [\r\n        {\r\n            \"id\": 1 // ID del permiso READ\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "holaseg",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "centro8",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/holaseg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"holaseg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZW50cm84IiwibmJmIjoxNzQ4NjEzNDY2LCJpc3MiOiJDRU5UUk84LVNFQyIsImV4cCI6MTc0ODYzMTQ2NiwiaWF0IjoxNzQ4NjEzNDY2LCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJqdGkiOiJjZmVhM2ZkMC02M2Y0LTRlYWUtYjBkMS03ODVhOTlmZGZlYzEifQ.zrAoswMJLw90-YeQO8pXOfSfAXTufZsm9jO6kMB12qQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"seguidor\",\r\n    \"password\": \"1234\",\r\n    \"enabled\": true,\r\n    \"accountNotExpired\": true,\r\n    \"accountNotLocked\": true,\r\n    \"credentialNotExpired\": true,\r\n    \"rolesList\": [\r\n        {\r\n            \"id\": 2 // ID del rol USER\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarTodosLosPermisos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZW50cm84IiwibmJmIjoxNzQ4NjEzNDY2LCJpc3MiOiJDRU5UUk84LVNFQyIsImV4cCI6MTc0ODYzMTQ2NiwiaWF0IjoxNzQ4NjEzNDY2LCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJqdGkiOiJjZmVhM2ZkMC02M2Y0LTRlYWUtYjBkMS03ODVhOTlmZGZlYzEifQ.zrAoswMJLw90-YeQO8pXOfSfAXTufZsm9jO6kMB12qQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/permissions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarUnPermiso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZW50cm84IiwibmJmIjoxNzQ4NjEzNDY2LCJpc3MiOiJDRU5UUk84LVNFQyIsImV4cCI6MTc0ODYzMTQ2NiwiaWF0IjoxNzQ4NjEzNDY2LCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJqdGkiOiJjZmVhM2ZkMC02M2Y0LTRlYWUtYjBkMS03ODVhOTlmZGZlYzEifQ.zrAoswMJLw90-YeQO8pXOfSfAXTufZsm9jO6kMB12qQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/permissions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permissions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarTodosLosRoles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZW50cm84IiwibmJmIjoxNzQ4NjEzNDY2LCJpc3MiOiJDRU5UUk84LVNFQyIsImV4cCI6MTc0ODYzMTQ2NiwiaWF0IjoxNzQ4NjEzNDY2LCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJqdGkiOiJjZmVhM2ZkMC02M2Y0LTRlYWUtYjBkMS03ODVhOTlmZGZlYzEifQ.zrAoswMJLw90-YeQO8pXOfSfAXTufZsm9jO6kMB12qQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarUnRol",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZW50cm84IiwibmJmIjoxNzQ4NjEzNDY2LCJpc3MiOiJDRU5UUk84LVNFQyIsImV4cCI6MTc0ODYzMTQ2NiwiaWF0IjoxNzQ4NjEzNDY2LCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJqdGkiOiJjZmVhM2ZkMC02M2Y0LTRlYWUtYjBkMS03ODVhOTlmZGZlYzEifQ.zrAoswMJLw90-YeQO8pXOfSfAXTufZsm9jO6kMB12qQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/roles/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"roles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarTodosLosUsuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZW50cm84IiwibmJmIjoxNzQ4NjEzNDY2LCJpc3MiOiJDRU5UUk84LVNFQyIsImV4cCI6MTc0ODYzMTQ2NiwiaWF0IjoxNzQ4NjEzNDY2LCJhdXRob3JpdGllcyI6IlJPTEVfQURNSU4iLCJqdGkiOiJjZmVhM2ZkMC02M2Y0LTRlYWUtYjBkMS03ODVhOTlmZGZlYzEifQ.zrAoswMJLw90-YeQO8pXOfSfAXTufZsm9jO6kMB12qQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarUnUsuario",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "centro8",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
