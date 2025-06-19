@@ -1,0 +1,41 @@
+
+FONDO
+bg-dark : negro
+bg-light : blanco
+bg-danger : rojo
+bg-warning : amarillo
+bg-primary : azul
+bg-secondary : gris oscuro
+bg-info : celeste
+bg-success: verde
+
+COLOR DE FUENTE
+text-dark
+text-light
+text-danger
+text-warning
+text-primary
+text-secondary
+text-info
+text-success
+
+TAMAÑO DE FUENTE
+Por defecto, 1rem = 16px
+fs-1 : 0.25rem
+fs-2 : 0.5rem
+fs-3 : 1rem
+fs-4 : 1.5rem
+fs-5 : 3rem
+
+
+BREAKPOINTS DE PANTALLA (ancho mínimo):
+Estos breakpoints se usan para hacer diseños responsivos.
+
+xs: <576px (no usa prefijo, por ejemplo, col-12)
+sm: ≥576px (.col-sm-*)
+md: ≥768px (.col-md-*)
+lg: ≥992px (.col-lg-*)
+xl: ≥1200px (.col-xl-*)
+xxl: ≥1400px (.col-xxl-*)
+
+
