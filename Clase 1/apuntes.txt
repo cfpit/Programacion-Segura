@@ -1,0 +1,12 @@
+Autenticacion
+	--> JWT 
+	--> OAuth 2
+		--> Google, Meta, IG
+
+Autorizacion
+	-->	Usuarios
+	--> Roles
+	--> Permisos
+
+Cifrado de claves
+	--> BiCrypt
