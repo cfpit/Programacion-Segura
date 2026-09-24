@@ -9,4 +9,4 @@ Autorizacion
 	--> Permisos
 
 Cifrado de claves
-	--> BiCrypt
+	--> BCrypt
