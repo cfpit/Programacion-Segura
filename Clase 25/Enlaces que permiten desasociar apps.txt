@@ -1,0 +1,5 @@
+Enlaces que permiten desasociar apps
+
+https://github.com/settings/applications
+
+https://myaccount.google.com/connections
