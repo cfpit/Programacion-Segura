@@ -1,0 +1,12 @@
+En Antigravity IDE
+
+tif
+├── tpn8
+└── oauth2github
+
+Combinar ambos proyectos en uno solo
+cambiando x las entidades del DER.
+
+Modificar Readme, Bruno
+
+Agente de IA: Gemini Flash 3.8 High
